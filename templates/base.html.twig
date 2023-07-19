@@ -1,16 +1,111 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
 
-        {% block javascripts %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="dc.description"
+        content="Agence de développement Web Freelance spécialisé en création des applications web et des site internet et accompagne les entreprises et les particuliers à se constituer une image forte sur le web." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:url" content="https://millecode.com/" />
+    <meta property="og:site_name" content="Millecode" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Millecode- Agence de développement web" />
+    <meta property="og:description"
+        content="Agence de développement Web Freelance spécialisé en création des applications web et des site internet et accompagne les entreprises et les particuliers à se constituer une image forte sur le web" />
+    <meta property="og:image" content="https://millecode.com/assets/images/app-millecode.png" />
+
+    <meta name="keywords"
+        content="creative, cv, designer,  online cv, online resume, powerful portfolio, professional, professional resume, responsive, resume, vcard " />
+    <meta name="developer" content="Md. Siful Islam">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- FAV AND ICONS   -->
+    <link rel="shortcut icon" href="{{asset('assets/images/millecode-icone.png')}}">
+
+    <title>{% block title %}Vous etes pas autorisé à cracker mon site{% endblock %}</title>
+    <link rel="icon" href="{{asset('assets/images/millecode-icone.png')}}">
+
+
+    <!-- Google Font-->
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{asset('assets/icons/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{asset('assets/plugins/css/bootstrap.min.css')}}">
+    <!-- Animate CSS-->
+    <link rel="stylesheet" href="{{asset('assets/plugins/css/animate.css')}}">
+    <!-- Owl Carousel CSS-->
+    <link rel="stylesheet" href="{{asset('assets/plugins/css/owl.css')}}">
+    <!-- Fancybox-->
+    <link rel="stylesheet" href="{{asset('assets/plugins/css/jquery.fancybox.min.css')}}">
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="{{asset('assets/css/styles.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
+    <link rel="stylesheet" href="{{asset('demo/demo.css')}}">
+
+    <!-- Colors -->
+    <link rel="stylesheet" href="{{asset('assets/css/colors/defauld.css')}}" title="defauld">
+
+
+
+
+    {% block stylesheets %}
+    {% endblock %}
+
+    {% block javascripts %}
+    {% endblock %}
+</head>
+
+<body class="dark-vertion black-bg">
+    <!-- Start Loader -->
+    <div class="section-loader">
+        <div class="loader">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- End Loader -->
+
+
+    {% block body %}{% endblock %}
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <!-- jQuery -->
+    <script src="assets/plugins/js/jquery.min.js"></script>
+    <!-- popper -->
+    <script src="assets/plugins/js/popper.min.js"></script>
+    <!-- bootstrap -->
+    <script src="assets/plugins/js/bootstrap.min.js"></script>
+    <!-- owl carousel -->
+    <script src="assets/plugins/js/owl.carousel.js"></script>
+    <!-- validator -->
+    <script src="assets/plugins/js/validator.min.js"></script>
+    <!-- wow -->
+    <script src="assets/plugins/js/wow.min.js"></script>
+    <!-- mixin js-->
+    <script src="assets/plugins/js/jquery.mixitup.min.js"></script>
+    <!-- circle progress-->
+    <script src="assets/plugins/js/circle-progress.js"></script>
+    <!-- jquery nav -->
+    <script src="assets/plugins/js/jquery.nav.js"></script>
+    <!-- Fancybox js-->
+    <script src="assets/plugins/js/jquery.fancybox.min.js"></script>
+    <!-- isotope js-->
+    <script src="assets/plugins/js/isotope.pkgd.js"></script>
+    <script src="assets/plugins/js/packery-mode.pkgd.js"></script>
+
+    <!-- Custom Scripts-->
+    <script src="assets/js/map-init.js"></script>
+    <script src="assets/js/custom-scripts.js"></script>
+
+    <!-- STYLE SWITCH STYLESHEET ONLY FOR DEMO -->
+    <script type="text/javascript" src="{{asset('demo/styleswitcher.js')}}"></script>
+    <script type="text/javascript" src="{{asset('demo/demo.js')}}"></script>
+
+
+</body>
+
 </html>

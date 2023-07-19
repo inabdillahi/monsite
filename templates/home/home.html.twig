@@ -1,0 +1,850 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{titre}} {% endblock %}
+
+{% block body %}
+
+
+
+
+
+
+<header class="black-bg mh-header mh-fixed-nav nav-scroll mh-xs-mobile-nav wow fadeInUp" id="mh-header">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg mh-nav nav-btn">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/millecode.png" width="170px" alt="Logo millecode" class="img-fluid">
+                    <!-- <h2>Maha</h2> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-0 ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#mh-home"><i class="fa fa-home"></i> Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#mh-about"><i class="fa fa-book" aria-hidden="true"></i> À
+                                Propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#mh-skills"><i class="fa fa-list" aria-hidden="true"></i>
+                                Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#mh-experience"><i class="fa fa-flask" aria-hidden="true"></i>
+                                Expériences</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#mh-portfolio">Réalisations</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#mh-contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+
+
+
+
+
+<section class="mh-home" id="mh-home">
+    <div class="home-ovimg map-image image-bg">
+        <div class="container">
+            <div class="row xs-column-reverse section-separator vertical-middle-content home-padding">
+                <div class="col-sm-6">
+                    <div class="mh-header-info">
+
+                        {% for message in app.flashes('success') %}
+                        <div class="mh-service-item shadow-1 dark-bg wow fadeInUp p-3 mb-5" data-wow-duration="0.8s"
+                            data-wow-delay="0.5s">
+                            {{ message }}
+                        </div>
+                        {% endfor %}
+                        <div class="mh-promo wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
+                            <span>Bonjour je suis</span>
+                        </div>
+
+                        <h3 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">MOHAMED ABDILLAHI NOUR
+                        </h3>
+                        <h5 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">Développeur web
+                            freelance expert en PHP / SYMFONY</h5>
+                        <span>
+                            Vous avez une mission de développement web. je suis DISPONIBLE à n'importe quels moments.
+                            CONTACTEZ-MOI.
+                        </span>
+
+                        <ul>
+                            <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s"><i
+                                    class="fa fa-envelope"></i><a href="mailto:">mohamed@millecode.com</a></li>
+                            <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s"><i
+                                    class="fa fa-phone"></i><a href="callto:">(+253) 77 36 99 58</a></li>
+                            <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s"><i
+                                    class="fa fa-map-marker"></i>
+                                <address>1017, Djibouti, Djibouti ville</address>
+                            </li>
+                        </ul>
+
+                        <ul class="social-icon wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-github"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="hero-img wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
+                        <div class="">
+                            <img src="assets/images/med-millecode.jpg" alt="mohamed millecode" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<section class="mh-about" id="mh-about">
+    <div class="container">
+        <div class="row section-separator ">
+            <div class="col-sm-12 col-md-6">
+                <div class="mh-about-img shadow-2 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
+                    <img src="assets/images/a-propos-millecode.png" alt="à propos de millecode" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="mh-about-inner">
+                    <h2 class="wow fadeInUp mb-3 text-center" data-wow-duration="0.8s" data-wow-delay="0.1s">QUI SUIS-JE
+                        ?</h2>
+                    <hr class="hr mt-0 mb-3">
+
+                    <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                        Je me prénomme MOHAMED ABDILLAHI NOUR, passionné par le développement web depuis {{("now" |
+                        date('Y'))-2017 }} ans experts
+                        sur le langage web PHP et ce Framework comme Symfony.
+                        Je cherche actuellement une mission quelque soit votre statut (entrepris ou Particulier), je
+                        crée vos projets web sur mesure, en vous conseillant vers le choix le plus cohérent avec votre
+                        budget, vos besoins et vos attentes.
+                    </p>
+                    <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                        Autonome, créative, dynamique, et sérieux. Acharné de travail, je suis à 100%
+                        investi pour vous donner entière satisfaction.
+                    </p>
+
+
+
+                    <a href="#" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s"
+                        data-wow-delay="0.4s">Télécharger mon CV <i class="fa fa-download"></i></a>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<section class="mh-skills">
+    <div class="container">
+        <div class="row section-separator">
+            <div class="section-title text-center col-sm-12">
+                <!--<h2>Skills</h2>-->
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="mh-skills-inner">
+                    <div class="mh-professional-skill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                        <h3 class="mb-3">OUTIL TECHNIQUE QUOTIDIEN</h3>
+                        <hr class="hr mt-0 mb-3">
+
+                        <div class="each-skills">
+                            <div class="candidatos">
+                                <div class="parcial">
+                                    <div class="info">
+                                        <div class="nome">PHP</div>
+                                        <div class="percentagem-num">80%</div>
+                                    </div>
+                                    <div class="progressBar">
+                                        <div class="percentagem" style="width: 80%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="candidatos">
+                                <div class="parcial">
+                                    <div class="info">
+                                        <div class="nome">SYMFONY</div>
+                                        <div class="percentagem-num">70%</div>
+                                    </div>
+                                    <div class="progressBar">
+                                        <div class="percentagem" style="width: 70%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="candidatos">
+                                <div class="parcial">
+                                    <div class="info">
+                                        <div class="nome">API REST</div>
+                                        <div class="percentagem-num">60%</div>
+                                    </div>
+                                    <div class="progressBar">
+                                        <div class="percentagem" style="width: 60%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="candidatos">
+                                <div class="parcial">
+                                    <div class="info">
+                                        <div class="nome">REACT JS</div>
+                                        <div class="percentagem-num">50%</div>
+                                    </div>
+                                    <div class="progressBar">
+                                        <div class="percentagem" style="width: 50%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="candidatos">
+                                <div class="parcial">
+                                    <div class="info">
+                                        <div class="nome">GIT et GITHUB</div>
+                                        <div class="percentagem-num">75%</div>
+                                    </div>
+                                    <div class="progressBar">
+                                        <div class="percentagem" style="width: 75%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="mt-5">MON PANEL DE COMPETENCE</h3>
+                            <div class="mh-about-tag wow fadeInUp mt-5" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                                <ul>
+
+                                    <li><img src="{{asset('assets/outils/php-millecode.png')}}" alt="php millecode"
+                                            width="50px" class="img-fluid rounded-circle" srcset=""></li>
+                                    <li><img src="{{asset('assets/outils/symfony-millecode.png')}}"
+                                            alt="symfony millecode" width="50px" class="img-fluid rounded-circle"
+                                            srcset=""></li>
+                                    <li><img src="{{asset('assets/outils/git-millecode.png')}}" alt="git millecode"
+                                            width="50px" class="img-fluid rounded-circle" srcset=""></li>
+
+
+                                    <li><img src="{{asset('assets/outils/github-millecode.png')}}"
+                                            alt="github millecode" width="50px" class="img-fluid rounded-circle"
+                                            srcset=""></li>
+                                    <li><img src="{{asset('assets/outils/html-millecode.png')}}" alt="html millecode"
+                                            width="50px" class="img-fluid rounded-circle" srcset=""></li>
+                                    <li><img src="{{asset('assets/outils/bootstrap-millecode.png')}}"
+                                            alt="api-millecode" width="50px" class="img-fluid rounded-circle" srcset="">
+                                    </li>
+                                    <li><img src="{{asset('assets/outils/react-millecode.png')}}" alt="react millecode"
+                                            width="50px" class="img-fluid rounded-circle" srcset=""></li>
+                                    <li><img src="{{asset('assets/outils/js-millecode.jpg')}}" alt="js millecode"
+                                            width="50px" class="img-fluid rounded-circle" srcset=""></li>
+                                    <li><img src="{{asset('assets/outils/api-millecode.png')}}" alt="api millecode"
+                                            width="50px" class="img-fluid rounded-circle" srcset=""></li>
+                                    <li><img src="{{asset('assets/outils/sql-millecode.png')}}" alt="sql millecode"
+                                            width="50px" class="img-fluid rounded-circle" srcset=""></li>
+                                    <li><img src="{{asset('assets/outils/xd-millecode.png')}}" alt="xd millecode"
+                                            width="50px" class="img-fluid rounded-circle" srcset=""></li>
+                                    <li><img src="{{asset('assets/outils/css-millecode.png')}}" alt="css millecode"
+                                            width="50px" class="img-fluid rounded-circle" srcset=""></li>
+                                    <li><img src="{{asset('assets/outils/seo-millecode.png')}}" alt="seo millecode"
+                                            width="50px" class="img-fluid rounded-circle" srcset=""></li>
+                                    <li><img src="{{asset('assets/outils/laravel-millecode.png')}}"
+                                            alt="laravel millecode" width="50px" class="img-fluid rounded-circle"
+                                            srcset=""></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="mh-professional-skills wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
+                    <h3 class="mb-3">DOMAINE DE COMPETENCE</h3>
+                    <hr class="hr mt-0 mb-3">
+
+                    <ul class="mh-professional-progress">
+                        <li>
+                            <div class="mh-progress mh-progress-circle" data-progress="50"></div>
+                            <div class="pr-skill-name">Développement frend-end</div>
+                        </li>
+                        <li>
+                            <div class="mh-progress mh-progress-circle" data-progress="75"></div>
+                            <div class="pr-skill-name">Développement back-end</div>
+                        </li>
+                        <li>
+                            <div class="mh-progress mh-progress-circle" data-progress="60"></div>
+                            <div class="pr-skill-name">Intégration continue</div>
+                        </li>
+                        <li>
+                            <div class="mh-progress mh-progress-circle" data-progress="70"></div>
+                            <div class="pr-skill-name">Marketing digital</div>
+                        </li>
+
+                        <li>
+                            <div class="mh-progress mh-progress-circle" data-progress="60"></div>
+                            <div class="pr-skill-name">Désigne web</div>
+                        </li>
+
+                        <li>
+                            <div class="mh-progress mh-progress-circle" data-progress="90"></div>
+                            <div class="pr-skill-name">Travail d'équipe</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="mh-service" id="mh-skills">
+    <div class="container">
+        <div class="row section-separator">
+            <div class="col-sm-12 text-center section-title wow fadeInUp" data-wow-duration="0.8s"
+                data-wow-delay="0.2s">
+                <h3 class="mb-3">MES SERVICES</h3>
+                <hr class="hr mt-0 mb-3">
+
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mt-3 text-center ">
+                <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s"
+                    data-wow-delay="0.3s">
+                    <img src="{{asset('assets/images/designe-millecode.png')}}" width="120px"
+                        class="img-fluid mx-auto d-block" alt="designe millecode" srcset="">
+                    <h3>Désigne web</h3>
+                    <p>
+                        Étude ergonomique de l'interface du site ou de l'application web avant son
+                        développement. Création d'un prototype complète du projet web.
+                    <div class="mh-about-tag wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                        <ul>
+                            <li><span>ADOBE XD</span></li>
+                            <li><span>CREATION D'UN PROTOTYPE</span></li>
+                        </ul>
+                    </div>
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mt-3 text-center ">
+                <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s"
+                    data-wow-delay="0.5s">
+                    <img src="{{asset('assets/images/site-millecode.png')}}" width="120px"
+                        class="img-fluid mx-auto d-block" alt="création site web millecode" srcset="">
+                    <h3>Création d'un site internet</h3>
+                    <p>
+                        Création de sites Web sur-mesure afin de s'adapter au mieux à vos besoins..
+                        Site e-commerce, site vitrine, site d'entreprise etc.
+                    <div class="mh-about-tag wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                        <ul>
+                            <li><span>HTML</span></li>
+                            <li><span>CSS</span></li>
+                            <li><span>PHP</span></li>
+                            <li><span>REACT</span></li>
+                            <li><span>JAVASCRIPT</span></li>
+                            <li><span>BOOTSTRAP</span></li>
+                        </ul>
+                    </div>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-4 mt-3 text-center">
+                <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s"
+                    data-wow-delay="0.5s">
+                    <img src="{{asset('assets/images/app-millecode.png')}}" width="120px"
+                        class="img-fluid mx-auto d-block" alt="Application web chez millecode" srcset="">
+                    <h3>Application web</h3>
+                    <p>
+                        Développement d'applications qui s'adaptent aux spécificités de votre entreprise.Application
+                        intranet, CRM, ERP, Gestions des stocks..
+                    <div class="mh-about-tag wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                        <ul>
+                            <li><span>PHP</span></li>
+                            <li><span>SYMFONY</span></li>
+                            <li><span>LARAVEL</span></li>
+                            <li><span>REACT</span></li>
+                            <li><span>MYSQL</span></li>
+                            <li><span>SQL</span></li>
+
+                        </ul>
+                    </div>
+                    </p>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="col-sm-12 col-md-6 col-lg-4 mt-3 text-center">
+                <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s"
+                    data-wow-delay="0.7s">
+                    <img src="{{asset('assets/images/seo-millecode.png')}}" width="120px"
+                        class="img-fluid mx-auto d-block" alt="Référencement naturel chez millecode" srcset="">
+                    <h3>Référencement naturel</h3>
+                    <p>
+                        Apparaître dans les premières pages sur les différents moteurs de recherche comme google.
+                        Temps de chargement des pages optimisés, Utilisations des mot-clés cible.
+                    <div class="mh-about-tag wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                        <ul>
+                            <li><span>SEO</span></li>
+                            <li><span>RANKING</span></li>
+                            <li><span>LINKS BUILDING</span></li>
+                            <li><span>GOOGME ANALYTIQUE</span></li>
+                            <li><span>GOOGLE SEARCH</span></li>
+                        </ul>
+                    </div>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-4 mt-3 text-center">
+                <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s"
+                    data-wow-delay="0.7s">
+                    <img src="{{asset('assets/images/marketing-millecode.png')}}" width="120px"
+                        class="img-fluid mx-auto d-block" alt="Marketing digital chez millecode" srcset="">
+                    <h3>Marketing digital</h3>
+
+                    <p>
+                        Avoir un site internet où application web est une chose, convertir le visiteur de votre site en
+                        client et transformer ces derniers en client fidèle est une autre.
+                    <div class="mh-about-tag wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                        <ul>
+                            <li><span>FACEBOOK ADS</span></li>
+                            <li><span>INSTAGRAMME ADS</span></li>
+                            <li><span>YOUTUBE ADS</span></li>
+                            <li><span>GOOGLE ADS</span></li>
+                            <li><span>LINKEDIN</span></li>
+                            <li><span>E-MAILING</span></li>
+                        </ul>
+                    </div>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-4 mt-3 text-center">
+                <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s"
+                    data-wow-delay="0.7s">
+                    <img src="{{asset('assets/images/hebergement-millecode.png')}}" width="120px"
+                        class="img-fluid mx-auto d-block" alt="Hébergement web chez millecode" srcset="">
+                    <h3>Hébergement web</h3>
+                    <p>
+                        L’hébergement d’un site ou d'une application web est essentiel. Elle doit être adapté aux
+                        besoins de performance de vos projets web (Site e-commerce, site vitrine ou application web)
+                    <div class="mh-about-tag wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                        <ul>
+                            <li><span>MUTUALISE</span></li>
+                            <li><span>VPS LINUX</span></li>
+                            <li><span>DEDIER</span></li>
+                            <li><span>FTP</span></li>
+                            <li><span>CI/CD</span></li>
+                            <li><span>E-MAIL PRO</span></li>
+                            <li><span>DOCKER</span></li>
+                            <li><span>PAAS</span></li>
+                        </ul>
+                    </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="mh-experince" id="mh-experience">
+    <div class="bolor-overlay">
+        <div class="container">
+            <div class="row section-separator">
+                <div class="col-sm-12 col-md-12">
+                    <div class="mh-education">
+                        <h3 class="wow fadeInUp text-center mb-3" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                            EDUCATION
+                        </h3>
+                        <hr class="hr mt-0 mb-3">
+
+                        <div class="mh-education-deatils">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12 mt-3">
+                                    <!-- Education Institutes-->
+                                    <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s"
+                                        data-wow-delay="0.3s">
+                                        <h4>Développement web et Marketing digital</h4>
+                                        <span>Autodidacte</span>
+                                        <div class="mh-eduyear">2016-Aujourd'hui</div>
+                                        <p>
+                                            Durant toutes ces années je me formais régulièrement et d'une manière
+                                            permanente aux nouvelles technologies c'est comme ça que j'ai appris le
+                                            développement web.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-12 mt-3">
+                                    <!-- Education Institutes-->
+                                    <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s"
+                                        data-wow-delay="0.5s">
+                                        <h4>Master 1 informatique avancé en ligne</h4>
+                                        <span>Université de Franche-comté</span>
+                                        <div class="mh-eduyear">2019-2020</div>
+                                        <p>
+                                            Dans cette première année de master j'ai pu confirmer mes années
+                                            d'expérience en développement web et gestions de projets.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-6 mt-3">
+                                    <!-- Education Institutes-->
+                                    <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s"
+                                        data-wow-delay="0.6s">
+                                        <h4>Licence informatique</h4>
+                                        <span>Université de Djibouti</span>
+                                        <div class="mh-eduyear">2014-2017</div>
+                                        <p>
+                                            Toutes au long des ces trois années d'études, j'ai découvert l'informatique
+                                            d'une manière où je devins obsédé par cette filière.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-6 mt-3">
+                                    <!-- Education Institutes-->
+                                    <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s"
+                                        data-wow-delay="0.6s">
+                                        <h4>Baccalauréat scientifique</h4>
+                                        <span>Lycée de Balballa à Djibouti</span>
+                                        <div class="mh-eduyear">2014-2017</div>
+                                        <p>
+                                            Avec une spécialité de Mathématique, j'ai passé trois ans dans le monde
+                                            scientifique et en pratiquons parallèlement l'informatique
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row section-separator">
+                <div class="col-sm-12 col-md-12">
+                    <div class="mh-work">
+                        <h3 class="text-center mb-3">EXPERIENCE EN AUTODIDACTE</h3>
+                        <hr class="hr mt-0 mb-3">
+
+                        <div class="mh-experience-deatils">
+                            <div class="row">
+                                <div class="col-sm-6 col-12 col-md-4 mt-3">
+                                    <!-- Education Institutes-->
+                                    <div class="mh-work-item dark-bg wow fadeInUp border border-danger"
+                                        data-wow-duration="0.8s" data-wow-delay="0.4s">
+                                        <h4>Marketing Digital</h4>
+                                        <div class="mh-eduyear">2022-2023</div>
+                                        <span>Mes acquis :</span>
+                                        <ul class="work-responsibility">
+                                            <li><i class="fa fa-circle"></i>Marketing des réseaux sociaux</li>
+                                            <li><i class="fa fa-circle"></i>Les outils de Google</li>
+                                            <li><i class="fa fa-circle"></i>Les référencements naturels </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-12 col-md-4 mt-3">
+                                    <!-- Education Institutes-->
+                                    <div class="mh-work-item dark-bg wow fadeInUp border border-danger"
+                                        data-wow-duration="0.8s" data-wow-delay="0.6s">
+                                        <h4>Les outils d'aide à la décision</h4>
+                                        <div class="mh-eduyear">2021-2022</div>
+                                        <span>Mes acquis :</span>
+                                        <ul class="work-responsibility">
+                                            <li><i class="fa fa-circle"></i>Trello et Jira</li>
+                                            <li><i class="fa fa-circle"></i>Git et Github</li>
+                                            <li><i class="fa fa-circle"></i>Méthode Agile</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-md-4 mt-3">
+                                    <!-- Education Institutes-->
+                                    <div class="mh-work-item dark-bg wow fadeInUp border border-danger"
+                                        data-wow-duration="0.8s" data-wow-delay="0.7s">
+                                        <h4>Développement back-end</h4>
+                                        <div class="mh-eduyear">2018-2021</div>
+                                        <span>Mes acquis :</span>
+                                        <ul class="work-responsibility">
+                                            <li><i class="fa fa-circle"></i>PHP - SQL - MYSQL - POO - MVC</li>
+                                            <li><i class="fa fa-circle"></i>Framework Symfony</li>
+                                            <li><i class="fa fa-circle"></i>Framework Laravel</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-md-4 mt-3">
+                                    <!-- Education Institutes-->
+                                    <div class="mh-work-item dark-bg wow fadeInUp border border-danger"
+                                        data-wow-duration="0.8s" data-wow-delay="0.7s">
+                                        <h4>Développement front-end</h4>
+                                        <div class="mh-eduyear">2017-2018</div>
+                                        <span>Mes acquis :</span>
+                                        <ul class="work-responsibility">
+                                            <li><i class="fa fa-circle"></i>Javascript</li>
+                                            <li><i class="fa fa-circle"></i>Bibliothèque REACT JS</li>
+                                            <li><i class="fa fa-circle"></i>Jquery - Ajax</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12 col-sm-6 col-md-4 mt-3">
+                                    <!-- Education Institutes-->
+                                    <div class="mh-work-item dark-bg wow fadeInUp border border-danger"
+                                        data-wow-duration="0.8s" data-wow-delay="0.7s">
+                                        <h4>Développement Web</h4>
+                                        <div class="mh-eduyear">2016-2017</div>
+                                        <span>Mes acquis :</span>
+                                        <ul class="work-responsibility">
+                                            <li><i class="fa fa-circle"></i>Culture générale du web</li>
+                                            <li><i class="fa fa-circle"></i>Découvert HTML et CSS </li>
+                                            <li><i class="fa fa-circle"></i>Framework BOOTSTRAP</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-md-4 mt-3">
+                                    <!-- Education Institutes-->
+                                    <div class="mh-work-item dark-bg wow fadeInUp border border-danger"
+                                        data-wow-duration="0.8s" data-wow-delay="0.7s">
+                                        <h4>L'informatique</h4>
+                                        <div class="mh-eduyear">2014-2016</div>
+                                        <span>Mes acquis :</span>
+                                        <ul class="work-responsibility">
+                                            <li><i class="fa fa-circle"></i>Le réseau avec CISCO packet tracer</li>
+                                            <li><i class="fa fa-circle"></i>Le découvert des protocoles réseaux</li>
+                                            <li><i class="fa fa-circle"></i>Gestions des projets avec Gant</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<section class="mh-portfolio" id="mh-portfolio">
+    <div class="container">
+        <div class="row section-separator">
+            <div class="section-title col-sm-12 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
+                <h3 class="mb-3">MES REALISATIONS</h3>
+                <hr class="hr mt-0 mb-3">
+
+            </div>
+            <div class="part col-sm-12">
+
+                <div class="mh-project-gallery col-sm-12 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
+                    <div class="row">
+
+                        <div class="col-md-4 col-sm-6 col-xs-12 mt-3 ">
+                            <figure>
+                                <img src="assets/images/projet1-millecode.jpg" class="img-fluid rounded"
+                                    alt="site d'annonce développer par millecode">
+                                <figcaption class="fig-caption mt-3 text-center">
+                                    <h5 class="title">Un site d'annonce de services/d'emplois/et des produits</h5>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+
+                        <div class="col-md-4 col-sm-6 col-xs-12 mt-3 ">
+                            <figure>
+                                <img src="assets/images/projet2-millecode.jpg" class="img-fluid rounded"
+                                    alt="Site e-commerce crée par millecode">
+                                <figcaption class="fig-caption mt-3 text-center">
+                                    <h5 class="title">Un site web e-commerce avec différents types de paiement</h5>
+
+                                </figcaption>
+                            </figure>
+                        </div>
+
+
+                        <div class="col-md-4 col-sm-6 col-xs-12 mt-3 ">
+                            <figure>
+                                <img src="assets/images/projet3-millecode.jpg" class="img-fluid rounded"
+                                    alt="Application des rendez-vous médecin conçu par millecode">
+                                <figcaption class="fig-caption mt-3 text-center">
+                                    <h5 class="title">Une application web des rendez-vous médecin</h5>
+
+                                </figcaption>
+                            </figure>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+<footer class="mh-footer mh-footer-3 " id="mh-contact">
+    <div class="container-fluid">
+        <div class="row section-separator">
+            <div class="col-sm-12 section-title">
+                <h3 class="mb-3">ME CONTACTER</h3>
+                <hr class="hr mt-0 mb-3">
+
+            </div>
+            <div class="map-image image-bg col-sm-12">
+                <div class="container mt-30">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4 mh-footer-address mt-3">
+                            <div class="col-sm-12 xs-no-padding">
+                                <div class="mh-address-footer-item dark-bg shadow-1 media">
+
+                                    <div class="each-info media-body">
+                                        <h4><i class="fa fa-location-arrow"></i> Address</h4>
+                                        <address>
+                                            Djibouti, Djibouti ville
+                                        </address>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 xs-no-padding">
+                                <div class="mh-address-footer-item media dark-bg shadow-1">
+
+                                    <div class="each-info media-body">
+                                        <h4> <i class="fa fa-envelope-o"></i> Email</h4>
+
+                                        <a href="mailto:mohamed@millecode.com">mohamed@millecode.com</a><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 xs-no-padding">
+                                <div class="mh-address-footer-item media dark-bg shadow-1">
+                                    <div class="each-icon">
+                                    </div>
+                                    <div class="each-info media-body">
+                                        <h4> <i class="fa fa-phone"></i> Téléphone</h4>
+                                        <a href="callto:+25377369958">(+253) 77 36 99 58</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-8">
+                            <div class="single-form quate-form wow fadeInUp">
+                                {{form_start(form)}}
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        {{form_row(form.nom)}}
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        <div class="row">
+                                            <div class="col-sm-6 col-md-6">
+                                                {{form_row(form.email)}}
+                                            </div>
+                                            <div class="col-sm-6 col-md-6">
+                                                {{form_row(form.phone)}}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        {{form_row(form.sujet)}}
+
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        {{form_row(form.description)}}
+                                    </div>
+
+                                    <!-- Subject Button -->
+                                    <div class="btn-form col-sm-12">
+                                        <input type="submit" class="btn btn-fill btn-block" value="Envoyer">
+                                    </div>
+                                </div>
+                                {{form_end(form)}}
+                            </div>
+                        </div>
+                        <div class="col-sm-12 mt-5">
+                            <div class="mh-copyright text-center">
+                                <p>{{"now" | date('Y')}} - Mohamed Abdillahi Nour - All right reserved</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!--
+    ==============
+    * JS Files *
+    ==============
+    -->
+
+
+
+
+{% endblock %}
